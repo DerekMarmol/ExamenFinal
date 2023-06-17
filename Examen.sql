@@ -1,18 +1,31 @@
-create database 0907_23_13365;
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 17-06-2023 a las 16:49:49
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
-use 0907_23_13365;
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
-create table Producto(
-Codigo int,
-Nombre varchar (100),
-Precio varchar (10),
-Existencia varchar (5)
-);
 
-Select * from producto;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
-insert into producto (Codigo, Nombre, Precio, Existencia) values (001, "Fresas", "20", "30");
-insert into producto (Codigo, Nombre, Precio, Existencia) values (002, "Aceite", "15", "55");
-insert into producto (Codigo, Nombre, Precio, Existencia) values (003, "Crema", "7", "45");
-insert into producto (Codigo, Nombre, Precio, Existencia) values (004, "Detergente", "25", "25");
-insert into producto (Codigo, Nombre, Precio, Existencia) values (005, "Cafe", "35", "75");
+
+CREATE TABLE `producto` (
+  `Codigo` text NOT NULL,
+  `Nombre` text NOT NULL,
+  `Precio` text NOT NULL,
+  `Existencia` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
